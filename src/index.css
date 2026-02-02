@@ -1,0 +1,8 @@
+/* src/index.css — Tailwind v4 */
+@import "tailwindcss";
+
+body {
+  /* optional, keep your reset here */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
