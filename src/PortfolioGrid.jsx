@@ -110,7 +110,7 @@ function Logo({ dark = false }) {
   const textStyle = dark
     ? {
         fontFamily: LOGO_STACK,
-        fontSize: "22px",
+        fontSize: "32px",
         fontWeight: 900,
         backgroundImage: gradText,
         WebkitBackgroundClip: "text",
@@ -119,7 +119,7 @@ function Logo({ dark = false }) {
       }
     : {
         fontFamily: LOGO_STACK,
-        fontSize: "22px",
+        fontSize: "32px",
         fontWeight: 900,
         color: "#111111",
       };
@@ -710,9 +710,10 @@ function AboutCard() {
   return (
     <div className="w-full h-full p-6 md:p-8" data-about-content>
       <div className="grid grid-cols-[88px,1fr] gap-6 items-start">
-        <motion.div className="w-20 h-20 rounded-full bg-slate-200/60 dark:bg-white/10 ring-1 ring-black/5 dark:ring-white/10 grid place-items-center overflow-hidden cursor-pointer z-10" style={{ originX: 0.45 }} whileHover={{ scale: 1.6, boxShadow: "0 20px 60px rgba(0,0,0,0.25)" }} whileTap={{ scale: 1.5 }} transition={{ type: "spring", stiffness: 420, damping: 24 }}>
-          <span className="text-[11px]">Photo</span>
+        <motion.div  className="w-20 h-20 rounded-full overflow-hidden ring-1 ring-black/5 dark:ring-white/10"  style={{ originX: 0.45 }} whileHover={{ scale: 1.6 }} whileTap={{ scale: 1.5 }} > 
+          <img src="/sachin.jpg" alt="Sachin" className="w-full h-full object-cover object-[50%_30%]" /> 
         </motion.div>
+
         <div className="leading-7 text-sm md:text-base font-medium text-current">
           <div className="text-base md:text-lg leading-7 md:leading-8 text-current">
             <p className="font-medium">
