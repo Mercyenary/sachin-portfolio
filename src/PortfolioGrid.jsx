@@ -728,12 +728,16 @@ function AboutCard() {
 }
 
 export default function PortfolioGrid() {
-  const [themeDark, setThemeDark] = useState(false); // default dark
+  // Force dark mode immediately on first load (prevents white flash)
+useEffect(() => {
+  document.documentElement.classList.add("dark");
+}, []);
+  const [themeDark, setThemeDark] = useState(true); // default dark
   const [active, setActive] = useState("All");
   const [lockdown, setLockdown] = useState(false);
 
   // Brand & document title
-  const BRAND = "Sachin Portfolio";
+  const BRAND = "Sachin Sapkota — Data Engineer";
   useEffect(() => {
     try { document.title = BRAND; } catch {}
   }, []);
